@@ -11,11 +11,7 @@ class App extends Component {
     this.state={
       id:1,
       board: [
-        [
-          " ",
-          " ",
-          " ",
-          " ",
+        [" "," "," "," ",
           " ",
           " ",
           " ",
@@ -96,15 +92,15 @@ class App extends Component {
       mines: 9
     };
   }
-  // loadSampleGame = event =>{
-  //   axios
-  //     .get("https://minesweeper-api.herokuapp.com/games")
-  //     .then(response={
-  //       let newState= response.data
-  //       this.setState(newState)
-  //   })
+  loadSampleGame = event =>{
+    axios
+      .get("https://minesweeper-api.herokuapp.com/games")
+      .then(response={
+        let newState = response.data
+        this.setState(newState)
+    })
 
-  render() {
+  render() {}
     return (
       <div className="App">
         <head><link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet"/> </head>
@@ -145,7 +141,7 @@ class App extends Component {
           </main>
       </div>
     );
-  }
+    }
 }
 
 export default App;
