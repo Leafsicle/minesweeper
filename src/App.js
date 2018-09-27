@@ -8,99 +8,33 @@ class App extends Component {
   constructor (props){
     super(props);
 
-    this.state={
+    this.state = {
       id:1,
       board: [
-        [" "," "," "," ",
-          " ",
-          " ",
-          " ",
-          " "
+        [" "," "," "," "," "," "," "," "],
+        [" "," "," "," "," "," "," "," "],
+        [" "," "," "," "," "," "," "," "],
+        [" "," "," "," "," "," "," "," "],
+        [" "," "," "," "," "," "," "," "],
+        [" "," "," "," "," "," "," "," "],
+        [" "," "," "," "," "," "," "," "],
+        [" "," "," "," "," "," "," "," "]
         ],
-        [
-          " ",
-          " ",
-          "1",
-          "2",
-          "1",
-          "F",
-          " ",
-          " "
-        ],
-        [
-          " ",
-          "1",
-          "_",
-          "_",
-          "_",
-          "2",
-          " ",
-          " "
-        ],
-        [
-          " ",
-          "1",
-          "_",
-          "_",
-          "_",
-          "1",
-          " ",
-          " "
-        ],
-        [
-          " ",
-          " ",
-          "1",
-          "_",
-          "_",
-          "2",
-          " ",
-          " "
-        ],
-        [
-          " ",
-          " ",
-          " ",
-          "1",
-          "1",
-          " ",
-          " ",
-          " "
-        ],
-        [
-          " ",
-          " ",
-          " ",
-          " ",
-          " ",
-          " ",
-          " ",
-          " "
-        ],
-        [
-          " ",
-          " ",
-          " ",
-          " ",
-          " ",
-          " ",
-          " ",
-          " "
-        ]
-      ],
       state: "new",
       mines: 9
     };
   }
+
   loadSampleGame = event =>{
     axios
       .get("https://minesweeper-api.herokuapp.com/games")
-      .then(response={
+      .then(response=>{
         let newState = response.data
-        this.setState(newState)
-    })
+        this.setState = (newState)
+      })
+    
 
-  render() {}
+  render() {
     return (
       <div className="App">
         <head><link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet"/> </head>
@@ -109,6 +43,8 @@ class App extends Component {
             <table className="playarea">
               <tr>
                 <td colSpan={this.state.board[0].length}>
+                
+                {/* change this to a new game option after completion */}
                 <button onclick={this.loadSampleGame}>Load Sample Game</button>
                 <p> you are playing game # {this.state.id}</p>
                 </td>
@@ -141,7 +77,7 @@ class App extends Component {
           </main>
       </div>
     );
-    }
+  }
 }
 
 export default App;
