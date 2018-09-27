@@ -8,6 +8,7 @@ body{
   
   justify-content: center;
   width: 100vw;
+  border: 1px solid pink;
   height: 100vh;
 }
 .playarea{
