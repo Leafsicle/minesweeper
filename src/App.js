@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+ import './App.css';
 import Board from './Board'
 import axios from "axios";
 
@@ -35,6 +34,10 @@ class App extends Component {
     
 
   render() {
+    let rows=this.state
+
+
+
     return (
       <div className="App">
         <head><link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet"/> </head>
@@ -45,13 +48,11 @@ class App extends Component {
                 <td colSpan={this.state.board[0].length}>
                 
                 {/* change this to a new game option after completion */}
-                <button onclick={this.loadSampleGame}>Load Sample Game</button>
-                <p> you are playing game # {this.state.id}</p>
+                {/* <button onclick={this.loadSampleGame}>Load Sample Game</button>
+                <p> you are playing game # {this.state.id}</p> */}
                 </td>
               </tr>
-              <tr>
-                <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-              </tr>
+              <tr> {this.state.board[0]}              </tr>
               <tr>
                 <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
               </tr>
