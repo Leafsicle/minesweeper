@@ -10,7 +10,7 @@ class App extends Component {
     this.state = {
       id:"",
       board: [
-        ["","","","","","","",""],
+        ["00","01","02","03","","","",""],
         ["","","","","","","",""],
         ["","","","","","","",""],
         ["","","","","","","",""],
@@ -44,16 +44,14 @@ class App extends Component {
                 <button onClick={this.loadSampleGame}>Load Sample Game</button>
                 <p>you are playing game # {this.state.id} </p>  </td>
               </tr> 
-            <tr> 
-              <Row square={this.state.board[0][0]} />
-              <Row square={this.state.board[0][1]}/>
-              <Row square={this.state.board[0][2]}/>
-              <Row square={this.state.board[0][3]}/>
-              <Row square={this.state.board[0][4]}/>
-              <Row square={this.state.board[0][5]}/>
-              <Row square={this.state.board[0][6]}/>
-              <Row square={this.state.board[0][7]}/>
-            </tr>
+              <Row position= {0} square={this.state.board[0][0]}/>
+              <Row position= {1} square={this.state.board[0][1]}/>
+              <Row position= {2} square={this.state.board[0][2]}/>
+              <Row position= {3} square={this.state.board[0][3]}/>
+              <Row position= {4} square={this.state.board[0][4]}/>
+              <Row position= {5} square={this.state.board[0][5]}/>
+              <Row position= {6} square={this.state.board[0][6]}/>
+              <Row position= {7} square={this.state.board[0][7]}/>
             <tr> 
               <td>{this.state.board[1][0]}</td>
               <td>{this.state.board[1][1]}</td>

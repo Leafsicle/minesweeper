@@ -1,13 +1,16 @@
 import React, { Component } from 'react';
 
 class Row   extends Component {
+handleChoice=event=>{
+  console.log("I clicked!!!!", this.props.position)
+  // since this worked as a console log of ' I clicked' I can use this to act as a fetch for the API for this specifically targeted cell
+}
+
     render() {
         return(
-          <div>   
-            <tr>
-              <td>{this.props.square}</td>
-            </tr>
-          </div>
+          <td onClick={this.handleChoice}>  
+              {this.props.square}
+          </td>
         )
     }
 }
