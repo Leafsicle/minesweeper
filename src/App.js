@@ -10,7 +10,7 @@ class App extends Component {
     this.state = {
       id:"",
       board: [
-        ["00","01","02","03","","","",""],
+        ["","","","","","","",""],
         ["","","","","","","",""],
         ["","","","","","","",""],
         ["","","","","","","",""],
@@ -44,84 +44,80 @@ class App extends Component {
                 <button onClick={this.loadSampleGame}>Load Sample Game</button>
                 <p>you are playing game # {this.state.id} </p>  </td>
               </tr> 
-              <Row position= {0} square={this.state.board[0][0]}/>
-              <Row position= {1} square={this.state.board[0][1]}/>
-              <Row position= {2} square={this.state.board[0][2]}/>
-              <Row position= {3} square={this.state.board[0][3]}/>
-              <Row position= {4} square={this.state.board[0][4]}/>
-              <Row position= {5} square={this.state.board[0][5]}/>
-              <Row position= {6} square={this.state.board[0][6]}/>
-              <Row position= {7} square={this.state.board[0][7]}/>
-            <tr> 
-              <td>{this.state.board[1][0]}</td>
-              <td>{this.state.board[1][1]}</td>
-              <td>{this.state.board[1][2]}</td>
-              <td>{this.state.board[1][3]}</td>
-              <td>{this.state.board[1][4]}</td>
-              <td>{this.state.board[1][5]}</td>
-              <td>{this.state.board[1][6]}</td>
-              <td>{this.state.board[1][7]}</td>
-            </tr>
-            <tr> 
-              <td>{this.state.board[2][0]}</td>
-              <td>{this.state.board[2][1]}</td>
-              <td>{this.state.board[2][2]}</td>
-              <td>{this.state.board[2][3]}</td>
-              <td>{this.state.board[2][4]}</td>
-              <td>{this.state.board[2][5]}</td>
-              <td>{this.state.board[2][6]}</td>
-              <td>{this.state.board[2][7]}</td>
-            </tr>
-            <tr> 
-              <td>{this.state.board[3][0]}</td>
-              <td>{this.state.board[3][1]}</td>
-              <td>{this.state.board[3][2]}</td>
-              <td>{this.state.board[3][3]}</td>
-              <td>{this.state.board[3][4]}</td>
-              <td>{this.state.board[3][5]}</td>
-              <td>{this.state.board[3][6]}</td>
-              <td>{this.state.board[3][7]}</td>
-            </tr>
-            <tr> 
-              <td>{this.state.board[4][0]}</td>
-              <td>{this.state.board[4][1]}</td>
-              <td>{this.state.board[4][2]}</td>
-              <td>{this.state.board[4][3]}</td>
-              <td>{this.state.board[4][4]}</td>
-              <td>{this.state.board[4][5]}</td>
-              <td>{this.state.board[4][6]}</td>
-              <td>{this.state.board[4][7]}</td>
-            </tr>
-            <tr> 
-              <td>{this.state.board[5][0]}</td>
-              <td>{this.state.board[5][1]}</td>
-              <td>{this.state.board[5][2]}</td>
-              <td>{this.state.board[5][3]}</td>
-              <td>{this.state.board[5][4]}</td>
-              <td>{this.state.board[5][5]}</td>
-              <td>{this.state.board[5][6]}</td>
-              <td>{this.state.board[5][7]}</td>
-            </tr>
-            <tr> 
-              <td>{this.state.board[6][0]}</td>
-              <td>{this.state.board[6][1]}</td>
-              <td>{this.state.board[6][2]}</td>
-              <td>{this.state.board[6][3]}</td>
-              <td>{this.state.board[6][4]}</td>
-              <td>{this.state.board[6][5]}</td>
-              <td>{this.state.board[6][6]}</td>
-              <td>{this.state.board[6][7]}</td>
-            </tr>
-            <tr> 
-              <td>{this.state.board[7][0]}</td>
-              <td>{this.state.board[7][1]}</td>
-              <td>{this.state.board[7][2]}</td>
-              <td>{this.state.board[7][3]}</td>
-              <td>{this.state.board[7][4]}</td>
-              <td>{this.state.board[7][5]}</td>
-              <td>{this.state.board[7][6]}</td>
-              <td>{this.state.board[7][7]}</td>
-            </tr>
+              <tr>
+              <Row square={this.state.board[0][0]}/>
+              <Row square={this.state.board[0][1]}/>
+              <Row square={this.state.board[0][2]}/>
+              <Row square={this.state.board[0][3]}/>
+              <Row square={this.state.board[0][4]}/>
+              <Row square={this.state.board[0][5]}/>
+              <Row square={this.state.board[0][6]}/>
+              <Row square={this.state.board[0][7]}/>
+              </tr>
+              <tr>
+              <Row square={this.state.board[1][0]}/>
+              <Row square={this.state.board[1][1]}/>
+              <Row square={this.state.board[1][2]}/>
+              <Row square={this.state.board[1][3]}/>
+              <Row square={this.state.board[1][4]}/>
+              <Row square={this.state.board[1][5]}/>
+              <Row square={this.state.board[1][6]}/>
+              <Row square={this.state.board[1][7]}/>
+              </tr> <tr>
+              <Row square={this.state.board[2][0]}/>
+              <Row square={this.state.board[2][1]}/>
+              <Row square={this.state.board[2][2]}/>
+              <Row square={this.state.board[2][3]}/>
+              <Row square={this.state.board[2][4]}/>
+              <Row square={this.state.board[2][5]}/>
+              <Row square={this.state.board[2][6]}/>
+              <Row square={this.state.board[2][7]}/>
+              </tr> <tr>
+              <Row square={this.state.board[3][0]}/>
+              <Row square={this.state.board[3][1]}/>
+              <Row square={this.state.board[3][2]}/>
+              <Row square={this.state.board[3][3]}/>
+              <Row square={this.state.board[3][4]}/>
+              <Row square={this.state.board[3][5]}/>
+              <Row square={this.state.board[3][6]}/>
+              <Row square={this.state.board[3][7]}/>
+              </tr> <tr>
+              <Row square={this.state.board[4][0]}/>
+              <Row square={this.state.board[4][1]}/>
+              <Row square={this.state.board[4][2]}/>
+              <Row square={this.state.board[4][3]}/>
+              <Row square={this.state.board[4][4]}/>
+              <Row square={this.state.board[4][5]}/>
+              <Row square={this.state.board[4][6]}/>
+              <Row square={this.state.board[4][7]}/>
+              </tr> <tr>
+              <Row square={this.state.board[5][0]}/>
+              <Row square={this.state.board[5][1]}/>
+              <Row square={this.state.board[5][2]}/>
+              <Row square={this.state.board[5][3]}/>
+              <Row square={this.state.board[5][4]}/>
+              <Row square={this.state.board[5][5]}/>
+              <Row square={this.state.board[5][6]}/>
+              <Row square={this.state.board[5][7]}/>
+              </tr> <tr>
+              <Row square={this.state.board[6][0]}/>
+              <Row square={this.state.board[6][1]}/>
+              <Row square={this.state.board[6][2]}/>
+              <Row square={this.state.board[6][3]}/>
+              <Row square={this.state.board[6][4]}/>
+              <Row square={this.state.board[6][5]}/>
+              <Row square={this.state.board[6][6]}/>
+              <Row square={this.state.board[6][7]}/>
+              </tr> <tr>
+              <Row square={this.state.board[7][0]}/>
+              <Row square={this.state.board[7][1]}/>
+              <Row square={this.state.board[7][2]}/>
+              <Row square={this.state.board[7][3]}/>
+              <Row square={this.state.board[7][4]}/>
+              <Row square={this.state.board[7][5]}/>
+              <Row square={this.state.board[7][6]}/>
+              <Row square={this.state.board[7][7]}/>
+              </tr>
           </table> 
       </div>
     );
