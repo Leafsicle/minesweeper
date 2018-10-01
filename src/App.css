@@ -7,12 +7,8 @@ body{
   align-items: center;  
   justify-content: center;
   width: 100vw;
-  height: 100vh;
-}
-.playarea{
-  border: 2px solid black;
-  padding: 0;
-
+ /*  height: 100vh; */
+  color: black;
 }
 table{
   display: table;
@@ -20,6 +16,8 @@ table{
   margin: 0;
   align-items: center;
   border-collapse: collapse;
+  background-image: url('public/grass1.png')
+
 }
 tr{
   margin: 0;
@@ -36,7 +34,53 @@ td{
   text-align: center;
   justify-content: center;
   align-items: center;
+  background-color: ;
 }
-.covered {
-  /* background-image: url(grass1.png) */
+
+
+button{  background-color: orange ;
+  border-radius: 10px;
+  outline: none;
+}
+
+.dropbtn {
+  font-size: 12px;
+  border: none;
+  outline: none;
+
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  /* min-width: 160px; */
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+  background-color: white;
+  color:  orange;
 }
