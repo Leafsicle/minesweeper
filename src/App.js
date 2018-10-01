@@ -8,19 +8,19 @@ class App extends Component {
     super(props);
 
     this.state = {
-      id:"",
+      id:"0",
       board: [
-        ["1","2","3","9","","","",""],
-        ["1","2","3","","","","",""],
-        ["1","2","3","","","","",""],
-        ["1","2","3","","","","",""],
-        ["1","2","3","","","","",""],
-        ["1","2","3","","","","",""],
-        ["1","2","3","","","","",""],
-        ["1","2","3","","","","",""]
+        ["*","*","*","*","*","*","*","*"],
+        ["","","","","","","",""],
+        ["","","m","i","n","e","",""],
+        ["","","","","","","",""],
+        ["s","w","e","e","p","e","r","!"],
+        ["","","","","","","",""],
+        ["","","","","","","",""],
+        ["*","*","*","*","*","*","*","*"]
         ],
       state: "new",
-      mines: 9
+      mines: ""
     };
   }
 
@@ -65,8 +65,8 @@ class App extends Component {
                 {/* this tells the top row how many columns wide it should be  */}
                 <td colSpan={this.state.board.length}>
                 <button onClick={this.newGame}>Want to play?</button>
-                <p>you are playing game # {this.state.id} </p> 
-                <p>There are {this.state.mines} mines left</p> </td>
+                <p>you are playing game # {this.state.id}<br></br>
+                There are {this.state.mines} mines left </p></td>
               </tr> 
               
               <tr>
