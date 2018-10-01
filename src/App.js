@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Row from './Row'
-// import axios from "axios";
+import axios from "axios";
 
 class App extends Component {
   constructor(props){
@@ -10,40 +10,49 @@ class App extends Component {
     this.state = {
       id:"",
       board: [
-        ["","","","","","","",""],
-        ["","","","","","","",""],
-        ["","","","","","","",""],
-        ["","","","","","","",""],
-        ["","","","","","","",""],
-        ["","","","","","","",""],
-        ["","","","","","","",""],
-        ["","","","","","","",""]
+        ["1","2","3","9","","","",""],
+        ["1","2","3","","","","",""],
+        ["1","2","3","","","","",""],
+        ["1","2","3","","","","",""],
+        ["1","2","3","","","","",""],
+        ["1","2","3","","","","",""],
+        ["1","2","3","","","","",""],
+        ["1","2","3","","","","",""]
         ],
       state: "new",
       mines: 9
     };
   }
 
-  // loadSampleGame = (event) =>{
-  //   axios
-  //     .post("https://minesweeper-api.herokuapp.com/games", {difficulty:0})
-  //     .then(response=>{
-  //       this.setState(response.data)
-  //     })
-  // }    
+  loadSampleGame = (event) =>{
+    axios
+      .get("https://minesweeper-api.herokuapp.com/games", {difficulty:0})
+      .post(`https://minesweeper-api.herokuapp.com/games/${this.state.id}`)
+      .then(response=>{
+        this.setState(response.data)
+      })
+  }    
 
   render() {
+    // let board=this.state.board[0].map(Row=>{
+    //   return Row
+    // })
+
+
     return (
       <div className="App">
         <head><link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet"/></head>
           <h1>MINESWEEPER</h1>
           <table className="playarea">
+            <tbody>
               <tr>
                 {/* this tells the top row how many columns wide it should be  */}
                 <td colSpan={this.state.board.length}>
                 <button onClick={this.loadSampleGame}>Load Sample Game</button>
                 <p>you are playing game # {this.state.id} </p>  </td>
               </tr> 
+                {/* {board} */}
+
               <tr>
               <Row square={this.state.board[0][0]}/>
               <Row square={this.state.board[0][1]}/>
@@ -118,6 +127,7 @@ class App extends Component {
               <Row square={this.state.board[7][6]}/>
               <Row square={this.state.board[7][7]}/>
               </tr>
+              </tbody>
           </table> 
       </div>
     );
