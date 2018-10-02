@@ -8,7 +8,7 @@ body{
   justify-content: center;
   width: 100vw;
  /*  height: 100vh; */
-  color: black;
+  background-color: grey;
 }
 table{
   display: table;
@@ -16,7 +16,6 @@ table{
   margin: 0;
   align-items: center;
   border-collapse: collapse;
-  background-image: url('public/grass1.png')
 
 }
 tr{
@@ -83,4 +82,7 @@ button{  background-color: orange ;
 .dropdown:hover .dropbtn {
   background-color: white;
   color:  orange;
+}
+.clear{
+  background-color:  lightgray
 }

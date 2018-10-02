@@ -64,15 +64,6 @@ class App extends Component {
                     <a onClick={this.newGame} data-value="2" title="Are you this much of a masochist in every part of your life?">Difficult(24x24)</a>
                   </div>
                 </div>
-
-
-
-
-
-
-
-
-
                 <p>you are playing game # {this.state.id}</p>
                 There are {this.state.mines} mines left</td>
               </tr> 

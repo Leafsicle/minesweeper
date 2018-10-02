@@ -9,14 +9,14 @@ class Row   extends Component {
         this.props.flag(this.props.row, this.props.column)
         event.preventDefault()
 }
-
     render() {
         let output=this.props.square
         if(output === '*'){
             output='💩'
         }
         if(output=== '_'){
-            output=' '
+            output='_' 
+            let className='clear'
         }
         return(
             <td onClick={this.handleChoice} onContextMenu={this.flag}>
@@ -28,20 +28,3 @@ class Row   extends Component {
 export default Row
 
 
-// CLASS_NAMES = {
-//     '*': 'cell-bomb',
-//     F: 'cell-flag',
-//     '@': 'cell-flag',
-//     ' ': 'cell-covered'
-//   }
-
-//   VALUES = { '*': '💣', F: '⚑', '@': '⚑', _: ' ' }
-
-//   render() {
-//     return (
-//       <td
-//         className={this.CLASS_NAMES[this.props.value] || 'cell-exposed'}
-//         onContextMenu={this.handleFlag}
-//         onClick={this.handleCheck}
-//       >
-//         {this.VALUES[this.props.value] || this.props.value}
